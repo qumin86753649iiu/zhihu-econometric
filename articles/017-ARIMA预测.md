@@ -159,7 +159,7 @@ test = y[n_train:]
 
 这样我们就有了一个"真实但模拟"的波动率指数。
 
-![模拟 ARIMA(1,1,1) 时间序列](images/017-arima-series.png)
+![模拟 ARIMA(1,1,1) 时间序列](https://cdn.jsdelivr.net/gh/qumin86753649iiu/zhihu-econometric/images/017-arima-series.png)
 *图 1：模拟的 ARIMA(1,1,1) 序列。前 240 个点为训练集（蓝色），后 60 个点为测试集（红色），虚线为分割线。注意序列有明显的趋势性和随机性——这正是金融数据的特征。*
 
 ### 第二步：确定 d——ADF 检验
@@ -198,7 +198,7 @@ print(f"一阶差分后 ADF p值: {adf_diff[1]:.6f}")
 
 如果 ACF 和 PACF 都是拖尾（缓慢衰减），那可能是 ARMA 模型，需要更高阶。
 
-![ACF 和 PACF 对比](images/017-acf-pacf.png)
+![ACF 和 PACF 对比](https://cdn.jsdelivr.net/gh/qumin86753649iiu/zhihu-econometric/images/017-acf-pacf.png)
 *图 2：上一排是原始序列（非平稳）的 ACF 和 PACF——ACF 缓慢衰减是典型非平稳信号。下一排是一阶差分后的 ACF 和 PACF——这才是我们用来决定 p 和 q 的图。注意差分后的 PACF 在 lag=1 处显著（超出蓝色区间），之后截尾→p=1；ACF 也在 lag=1 之后截尾→q=1。*
 
 看图说话：
@@ -228,7 +228,7 @@ forecast_mean = forecast_result.predicted_mean
 forecast_ci = forecast_result.conf_int(alpha=0.05)
 ```
 
-![预测 vs 真实值](images/017-forecast.png)
+![预测 vs 真实值](https://cdn.jsdelivr.net/gh/qumin86753649iiu/zhihu-econometric/images/017-forecast.png)
 *图 3：蓝色是训练集历史，红色是测试集真实值，绿色虚线是 ARIMA(1,1,1) 的预测值，绿色阴影是 95% 置信区间。预测的整体趋势跟得上真实值，但置信区间随预测步数增加而扩大——预测越远越不确定，这完全合理。*
 
 ### 第六步：评估预测效果

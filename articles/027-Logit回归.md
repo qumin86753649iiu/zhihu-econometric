@@ -98,7 +98,7 @@ dti         0.857      0.116   7.40   0.000
 
 **你的"概率"变成了负数——这显然不对。**
 
-![LPM vs Logit 对比](images/027-lpm-vs-logit.png)
+![LPM vs Logit 对比](https://cdn.jsdelivr.net/gh/qumin86753649iiu/zhihu-econometric/images/027-lpm-vs-logit.png)
 *图 1：红色虚线是 LPM 的拟合值，蓝色 S 曲线是 Logit。可以看到 LPM 在两端越过了 [0,1] 的合理区间——预测概率可能是负数，也可能大于 1。Logit 则天然被限制在 0 和 1 之间。*
 
 ---
@@ -121,7 +121,7 @@ $$
 - 当 $β₀ + β₁X₁ + \cdots → +∞$，$P → 1$
 - **永远不越界**
 
-![Logit S 曲线](images/027-logit-curve.png)
+![Logit S 曲线](https://cdn.jsdelivr.net/gh/qumin86753649iiu/zhihu-econometric/images/027-logit-curve.png)
 *图 2：Sigmoid 函数将线性组合映射到 (0,1)。决策边界通常在 P=0.5 处——如果你预测的概率大于 50%，就说"会违约"。*
 
 ### 另一种等价的写法——对数几率（Log-Odds）
@@ -243,7 +243,7 @@ dti       0.699     0.069    10.12
 
 **最推荐什么？** 论文和报告中最好同时报告几率比（解释强度）和边际效应（解释实际影响量级）。
 
-![边际效应可视化](images/027-marginal-effects.png)
+![边际效应可视化](https://cdn.jsdelivr.net/gh/qumin86753649iiu/zhihu-econometric/images/027-marginal-effects.png)
 *图 3：蓝色 S 曲线是 Logit 的预测概率。红色虚线表示在均值负债率处的切线斜率——这就是边际效应。注意斜率在不同位置不同：在中间最陡（对概率影响最大），在两端接近 0。*
 
 ---
